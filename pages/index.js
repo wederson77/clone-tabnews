@@ -3,4 +3,3 @@ function Home() {
 }
 
 export default Home;
-// so uma botadinha amor
