@@ -1,5 +1,8 @@
 function Home() {
-  return <h1>Liliane eu amo você, se vocẽ me ama da uma risadinha◝(ᵔᗜᵔ)◜</h1>;
+  return (
+    <h1>
+      Os vícios vão engolir qualquer quantidade de tempo que você lhes der.
+    </h1>
+  );
 }
-
 export default Home;
