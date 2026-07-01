@@ -42,17 +42,18 @@ function DatabaseStatus() {
       <>
         <div>Versão: {data.dependencies.database.version}</div>
         <div>
-          Conexões Abertas {data.dependencies.database.open_connections}
+          Conexões Abertas: {data.dependencies.database.opened_connections}
         </div>
-        <div>Conexões Máximas {data.dependencies.database.max_connections}</div>
-      </>
-    );
-
-    return (
-      <>
-        <h2>Database</h2>
-        <div>{databaseStatusInformation}</div>
+        <div>
+          Conexões Máximas: {data.dependencies.database.max_connections}
+        </div>
       </>
     );
   }
+  return (
+    <>
+      <h2>Database</h2>
+      <div>{databaseStatusInformation}</div>
+    </>
+  );
 }
