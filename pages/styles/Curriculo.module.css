@@ -1,0 +1,461 @@
+.page {
+  min-height: 100vh;
+  background: #08111f;
+  position: relative;
+  overflow-x: hidden;
+  padding: 80px 20px;
+  color: #e8edf5;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  background: radial-gradient(circle at top left, #2563eb33, transparent 40%),
+    radial-gradient(circle at bottom right, #06b6d433, transparent 35%),
+    linear-gradient(180deg, #08111f, #111827);
+
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 980px;
+  margin: auto;
+}
+
+.hero {
+  margin-bottom: 40px;
+
+  padding: 60px;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: white;
+
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin-top: 18px;
+
+  color: #8ec5ff;
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+}
+
+.card {
+  margin-bottom: 28px;
+
+  padding: 34px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  margin-top: 0;
+
+  margin-bottom: 22px;
+
+  font-size: 1.5rem;
+
+  color: #5eb5ff;
+
+  border-left: 5px solid #3b82f6;
+
+  padding-left: 16px;
+}
+
+.card p {
+  color: #d7dbe3;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.contactGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 18px;
+}
+
+.contactGrid a,
+.contactGrid div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  transition: 0.25s;
+}
+
+.contactGrid a:hover {
+  background: #2563eb;
+
+  transform: translateY(-3px);
+}
+
+.contactGrid span {
+  word-break: break-word;
+}
+
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.skills span {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  transition: 0.25s;
+}
+
+.skills span:hover {
+  transform: scale(1.08);
+}
+
+/* ===== EXPERIÊNCIA ===== */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timelineItem {
+  position: relative;
+
+  padding-left: 28px;
+
+  border-left: 3px solid #2563eb;
+}
+
+.timelineItem::before {
+  content: "";
+
+  position: absolute;
+
+  left: -8px;
+  top: 6px;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: #3b82f6;
+
+  box-shadow: 0 0 16px #3b82f6;
+}
+
+.timelineItem h3 {
+  margin-top: 0;
+
+  margin-bottom: 12px;
+
+  color: white;
+
+  font-size: 1.2rem;
+}
+
+.timelineItem ul {
+  padding-left: 18px;
+
+  margin-top: 12px;
+}
+
+.timelineItem li {
+  margin-bottom: 8px;
+
+  color: #d6dce6;
+}
+
+/* ===== FORMAÇÃO ===== */
+
+.education h3 {
+  margin-top: 0;
+
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+/* ===== CURSOS ===== */
+
+.courseList {
+  margin: 0;
+
+  padding-left: 22px;
+}
+
+.courseList li {
+  margin-bottom: 12px;
+
+  color: #d7dbe3;
+
+  line-height: 1.7;
+}
+
+/* ===== RODAPÉ ===== */
+
+.footer {
+  text-align: center;
+
+  margin-top: 70px;
+
+  color: #8d98a8;
+
+  font-size: 0.95rem;
+}
+
+/* ===== SCROLL ===== */
+
+/* ===== SELEÇÃO ===== */
+
+/* ===== ANIMAÇÃO ===== */
+
+.card,
+.hero {
+  animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+  .page {
+    padding: 40px 18px;
+  }
+
+  .hero {
+    padding: 42px 28px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 24px;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .skills {
+    gap: 10px;
+  }
+
+  .skills span {
+    font-size: 0.9rem;
+
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 12px;
+  }
+
+  .hero {
+    padding: 28px 18px;
+
+    border-radius: 18px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 20px;
+
+    border-radius: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===== IMPRESSÃO ===== */
+
+@media print {
+  .background {
+    display: none;
+  }
+
+  .page {
+    background: white;
+
+    color: black;
+
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .hero {
+    color: black;
+
+    background: white;
+
+    border: none;
+
+    box-shadow: none;
+
+    padding: 0 0 30px;
+  }
+
+  .hero h1 {
+    color: black;
+  }
+
+  .subtitle {
+    color: #444;
+  }
+
+  .card {
+    background: white;
+
+    color: black;
+
+    box-shadow: none;
+
+    border: 1px solid #ddd;
+
+    page-break-inside: avoid;
+  }
+
+  .card h2 {
+    color: black;
+  }
+
+  .card p,
+  .card li,
+  .timelineItem h3,
+  .education h3 {
+    color: black;
+  }
+
+  .skills span {
+    color: black;
+
+    background: #eee;
+
+    border: 1px solid #bbb;
+  }
+
+  .footer {
+    color: #555;
+  }
+}
+
+/* ===== LINKS ===== */
+
+.contactGrid a {
+  transition: 0.25s;
+}
+
+.contactGrid a:hover {
+  opacity: 0.9;
+}
